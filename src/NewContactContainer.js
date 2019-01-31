@@ -9,20 +9,19 @@ class NewContactContainer extends Component {
 
     writeSomeTextOnName = (event) => {
         const myEvent = event.target.value;
-        this.setState((prevState) => ({
+        this.setState(() => ({
             summaryNameText: myEvent
         }));
     }
 
     writeSomeTextOnDepartment = (event) => {
         const myEvent = event.target.value;
-        this.setState((prevState) => ({
+        this.setState(() => ({
             summaryDepartmentText: myEvent
         }));
     }
 
     render() {
-        const { placeholderText } = this.props;
         return (
             <div>
                 <div>

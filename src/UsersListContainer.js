@@ -22,7 +22,7 @@ class UsersListContainer extends Component {
 
     }
 
-    // NIE UŻYWAM ZAPISU STRZAŁKOWEGO BO TĘ FUNKCJE TYLKO WYWOŁUJĘ A NIE PODAJĘ JAKO PARAMETRU
+    // NIE UŻYWAM ZAPISU STRZAŁKOWEGO BO TĘ FUNKCJE TYLKO WYWOŁUJĘ POZA RENDER
     // getFilteredUsersFromText(text) {
     //     return completeListOfUsers.filter(user => user.toLowerCase().includes(text.toLowerCase()))
     // }
@@ -30,7 +30,9 @@ class UsersListContainer extends Component {
     // wprowadzona asynchoniczność
     getFilteredUsersFromText(text) {
         return new Promise((resolve, reject) => {
-            const time = (Math.random() + 1) * 250;
+            let a =Math.random();
+            const time = (a + 1,5) * 100;
+            console.log("a ", a);console.log("TIME ", time);
             setTimeout(() => {
                 const filteredUsers = completeListOfUsers.filter(user => user.toLowerCase().includes(text.toLowerCase()));
                 resolve(filteredUsers);

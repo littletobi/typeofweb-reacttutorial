@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Button from './Button.js';
 
 class AppHeader extends Component {
-    handleClick = () => {
-        alert("Kliknięto");
-    }
+    // handleClick = () => {
+    //     alert("Kliknięto");
+    // }
 
     render() {
         return (
@@ -18,7 +18,7 @@ class AppHeader extends Component {
                         Lista kontaktów
                     </a>
                     <div className="header item">
-                        <Button label={"Dodaj!"} onButtonClick={this.handleClick}></Button>
+                        <Button label={"Reload"} onButtonClick={this.props.onButtonClick}></Button>
                     </div>
                 </nav>
             </header>
