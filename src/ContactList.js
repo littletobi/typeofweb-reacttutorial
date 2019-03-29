@@ -3,7 +3,8 @@ import ContactItem from './ContactItem';
 
 class ContactList extends Component {
     contactToContactItem = contact => {
-        const avatarUrl = contact.picture.thumbnail; const { title, first, last } = contact.name;
+        const avatarUrl = contact.picture.thumbnail; 
+        const { title, first, last } = contact.name;
         const name = `${title} ${first} ${last}`.trim();
         const phone = contact.phone;
         const key = contact.login.username;
@@ -11,12 +12,15 @@ class ContactList extends Component {
     };
 
     render() {
+        const { contacts } = this.props;
         return (
             <ul className="ui relaxed divided list selection" >
-                {this.props.contacts.map(this.contactToContactItem)}
+            {/* taki zapis sprawia, ze contacts bedzie mapowane jedynie jesli ma wartosc */}
+                {contacts ? contacts.map(this.contactToContactItem) : null}
             </ul >
         );
     }
 }
 
 export default ContactList;
+

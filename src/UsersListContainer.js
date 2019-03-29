@@ -30,9 +30,7 @@ class UsersListContainer extends Component {
     // wprowadzona asynchoniczność
     getFilteredUsersFromText(text) {
         return new Promise((resolve, reject) => {
-            let a =Math.random();
-            const time = (a + 1,5) * 100;
-            console.log("a ", a);console.log("TIME ", time);
+            const time = (Math.random() + 0.5) * 100;
             setTimeout(() => {
                 const filteredUsers = completeListOfUsers.filter(user => user.toLowerCase().includes(text.toLowerCase()));
                 resolve(filteredUsers);

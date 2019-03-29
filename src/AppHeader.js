@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import Button from './Button.js';
 
 class AppHeader extends Component {
-    // handleClick = () => {
-    //     alert("Kliknięto");
-    // }
-
     render() {
         return (
             <header className="ui fixed menu">
@@ -19,6 +15,7 @@ class AppHeader extends Component {
                     </a>
                     <div className="header item">
                         <Button label={"Reload"} onButtonClick={this.props.onButtonClick}></Button>
+
                     </div>
                 </nav>
             </header>
